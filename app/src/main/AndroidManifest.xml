@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.uwf.tabletopgroup.tabletop_squire">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- To access any networking features -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".AuthActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="landscape"
+            android:name=".GameRoomActivity"
+            android:label="@string/title_activity_game_room" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".ViewCharacterActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".CreateCharacterActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:screenOrientation="landscape"
+            android:name=".ViewAccountActivity"
+            />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        style="@style/EntryField"
+        android:inputType="textPersonName"
+        android:hint="@string/prompt_name"
+        android:id="@+id/name"/>
+    <EditText
+        style="@style/EntryField"
+        android:hint="@string/prompt_race"
+        android:id="@+id/race"/>
+    <EditText
+        style="@style/EntryField"
+        android:hint="@string/prompt_class"
+        android:id="@+id/character_class"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/attribute_layout"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/strength_label"
+            android:id="@+id/strength_label"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/attribute_placeholder"
+            android:id="@+id/strength"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/strength_label"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/dexterity_label"
+            android:id="@+id/dexterity_label"
+            android:layout_below="@+id/strength_label"
+            android:layout_alignStart="@+id/strength_label"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/attribute_placeholder"
+            android:id="@+id/dexterity"
+            android:layout_below="@+id/strength"
+            android:layout_alignStart="@+id/strength"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/constitution_label"
+            android:id="@+id/constitution_label"
+            android:layout_below="@+id/dexterity_label"
+            android:layout_alignStart="@+id/dexterity_label"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/attribute_placeholder"
+            android:id="@+id/constitution"
+            android:layout_below="@+id/dexterity"
+            android:layout_alignStart="@+id/dexterity"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/intelligence_label"
+            android:id="@+id/intelligence_label"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/strength"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/attribute_placeholder"
+            android:id="@+id/intelligence"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/intelligence_label"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/wisdom_label"
+            android:id="@+id/wisdom_label"
+            android:layout_below="@id/intelligence_label"
+            android:layout_alignStart="@id/intelligence_label"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/attribute_placeholder"
+            android:id="@+id/wisdom"
+            android:layout_below="@id/intelligence"
+            android:layout_alignStart="@id/intelligence"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/charisma_label"
+            android:id="@+id/charisma_label"
+            android:layout_below="@id/wisdom_label"
+            android:layout_alignStart="@id/wisdom_label"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:padding="16dp"
+            android:text="@string/attribute_placeholder"
+            android:id="@+id/charisma"
+            android:layout_below="@id/wisdom"
+            android:layout_alignStart="@id/wisdom"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_save"
+            android:padding="16dp"
+            android:id="@+id/save"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/action_roll"
+            android:id="@+id/roll"
+            android:layout_gravity="right"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/save"/>
+    </RelativeLayout>
+
+</LinearLayout>
